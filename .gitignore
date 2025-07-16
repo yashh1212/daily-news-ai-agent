@@ -1,0 +1,41 @@
+# 💡 Python cache files
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# 🧪 Virtual environment
+venv/
+env/
+
+# 🔐 Sensitive files
+.env
+.env.*
+*.key
+*.pem
+
+# 🔊 Audio files
+*.mp3
+*.wav
+
+# 🛠️ IDEs & Editors
+.vscode/
+.idea/
+
+# 🖥️ System files
+.DS_Store
+Thumbs.db
+
+# 📦 PIP files
+pip-log.txt
+
+# 📚 Jupyter / IPython
+.ipynb_checkpoints/
+*.ipynb
+
+# 📂 Logs
+*.log
+logs/
