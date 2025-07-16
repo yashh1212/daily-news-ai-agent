@@ -30,4 +30,8 @@ schedule.every().day.at("08:00").do(job)
 
 while True:
     schedule.run_pending()
+<<<<<<< HEAD
     time.sleep(60)
+=======
+    time.sleep(60)
+>>>>>>> 5efc1e5c9c6ef597d030ba32779c583a8a0cea18
