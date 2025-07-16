@@ -77,8 +77,4 @@ It will run daily at **8:00 AM** based on your system time.
 
 **Yash Dhokane**  
 📧 yashdhokane12@gmail.com  
-🔗 [LinkedIn](https://linkedin.com/in/yashdhokane)
-
-## 📜 License
-
-MIT License.
+🔗 [LinkedIn](https://linkedin.com/in/yash-dhokane)
