@@ -1,170 +1,95 @@
-Absolutely Yash! Here's a complete and clean `README.md` file for your project: **AI News Agent** that fetches news, summarizes it, converts it to voice, and sends it via Telegram and Email.
-
----
-
-## 📄 `README.md`
-
-````markdown
 # 🗞️ AI News Agent
 
-A smart AI agent that fetches the latest news, summarizes it using Gemini AI, converts it to speech, and sends it to you daily via **Telegram** and **Email**. Built with Python.
+A Python-based AI bot that fetches the latest news, summarizes it using Gemini, converts the summary to English voice, and sends it via **Telegram** (voice + text) and **Email**.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-- 🔍 Fetches latest news headlines
-- 🧠 Summarizes news using Gemini AI
-- 🔊 Converts summary to **natural English voice**
-- 📤 Sends voice & text message to **Telegram**
-- 📧 Sends summary to **Email**
-- ⏰ Runs automatically on a schedule (every X seconds or daily)
-
----
-
-## 🛠️ Tech Stack
-
-- Python 3
-- `requests` for APIs
-- `gTTS` for text-to-speech
-- `google.generativeai` (Gemini API)
-- `schedule` for task automation
-- `smtplib` for email sending
-- Telegram Bot API
-
----
-
-## 📦 Setup Instructions
-
-### 1. Clone the Repo
-
-```bash
-git clone https://github.com/YOUR_USERNAME/ai-news-agent.git
-cd ai-news-agent
-````
-
-### 2. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-> If `requirements.txt` is missing, install manually:
-
-```bash
-pip install requests gTTS schedule python-dotenv
-```
-
-### 3. Create `.env` File
-
-Create a `.env` file in the root folder:
-
-```
-SMTP_USER=your_gmail@gmail.com
-SMTP_PASS=your_email_app_password
-```
-
----
-
-## 🔐 Required API Keys
-
-### ✅ Gemini API (for summarizing)
-
-* Get it from [Google AI Studio](https://makersuite.google.com/app/apikey)
-* Replace your key in `ai_summarizer.py`
-
-### ✅ Telegram Bot Token
-
-* Create bot via [@BotFather](https://t.me/BotFather)
-* Paste the token & chat ID in `main.py`
-
----
-
-## ✅ Running the Agent
-
-### Run Once:
-
-```bash
-python main.py
-```
-
-### Run Every 10 Seconds (test):
-
-```python
-schedule.every(10).seconds.do(job)
-```
-
-### Run Daily at 8 AM:
-
-```python
-schedule.every().day.at("08:00").do(job)
-```
+- 📰 Fetches top news headlines
+- 🤖 Summarizes using Google Gemini AI (Gemini 1.5/2.0)
+- 🔊 Converts summary to natural English voice using `gTTS`
+- 📤 Sends summary + voice as a **Telegram message**
+- 📧 Sends daily email updates
+- ⏱️ Runs automatically on a schedule (e.g. every 10 sec or daily)
 
 ---
 
 ## 📁 Project Structure
 
-```
-📦 ai-news-agent
-├── main.py                # Entry point
-├── news_fetcher.py        # Fetch headlines
-├── ai_summarizer.py       # Summarize using Gemini
-├── voice_generator.py     # Convert text to speech
-├── telegram_send.py       # Send text + voice via Telegram
-├── send_mail.py           # Send email
-├── .env                   # Email credentials
-└── requirements.txt
-```
+ai-news-agent/
+├── ai_news_agent.py # All logic in one file
+├── .env # Private API & email credentials
+├── requirements.txt # Python dependencies
+├── .gitignore # Ignored files and folders
+└── README.md # This file
+
+yaml
+Copy
+Edit
 
 ---
 
-## 📤 Deployment Options
+## 🔧 Setup Instructions
 
-| Platform          | Notes                            |
-| ----------------- | -------------------------------- |
-| 🔹 Render         | Best for background workers      |
-| 🔹 PythonAnywhere | Great for beginners & scheduling |
-| 🔹 Replit         | For light testing                |
+### 1. Clone the Repository
 
----
+```bash
+git clone https://github.com/yourusername/ai-news-agent.git
+cd ai-news-agent
+2. Install Requirements
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Or install manually:
 
-## 🔒 Security Note
+bash
+Copy
+Edit
+pip install requests gTTS schedule python-dotenv
+3. Add .env File
+Create a .env file in the root folder with your email credentials:
 
-* Never commit `.env` or API keys to GitHub.
-* Add `.env` to your `.gitignore`.
+env
+Copy
+Edit
+SMTP_USER=your_email@gmail.com
+SMTP_PASS=your_app_password
+🔐 API Keys Required
+✅ Gemini API Key: Get it from Google AI Studio
 
----
+✅ Telegram Bot Token: Get it from @BotFather
 
-## 🙋‍♂️ Author
+✅ News API Key: From https://newsapi.org
 
-**Yash Dhokane**
-📧 [yashdhokane12@gmail.com](mailto:yashdhokane12@gmail.com)
-🔗 [LinkedIn](https://linkedin.com/in/yashdhokane)
+Replace your keys in ai_news_agent.py.
 
----
+✅ Running the Bot
+Run once (test):
+bash
+Copy
+Edit
+python ai_news_agent.py
+Run every 10 seconds:
+python
+Copy
+Edit
+schedule.every(10).seconds.do(job)
+Run daily at 8 AM:
+python
+Copy
+Edit
+schedule.every().day.at("08:00").do(job)
+☁️ Deployment Options
+Platform	Notes
+🔹 Render	Best for background worker bots
+🔹 PythonAnywhere	Great for beginners & scheduling
+🔹 Replit	Easy web-based testing
+🔹 GitHub Actions	Scheduled daily workflows
 
-## 📜 License
+🙋 Author
+Yash Dhokane
+📧 yashdhokane12@gmail.com
+🔗 LinkedIn
 
-MIT License. Feel free to use or modify this project.
-
----
-
-## 🚀 Want to improve it?
-
-* Add news categories (tech, politics, etc.)
-* Support multiple languages (Hindi, Marathi)
-* Deploy with a front-end dashboard
-
-PRs and suggestions are welcome!
-
-```
-
----
-
-Would you like me to:
-- Create this file for you?
-- Help you push it to GitHub?
-- Add a `requirements.txt` or `Procfile` for deployment?
-
-Let me know how you'd like to proceed next 🚀
-```
